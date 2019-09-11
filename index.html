@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head ng-app="kidsu">
-   	<meta charset="utf-8" />
+	<meta charset="utf-8" />
    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-   	<title>Index - Kids-U Data Entry Application</title>
+	<title>Index - Kids-U Data Entry Application</title>
 
 	<link href="bootstrap.css" rel="stylesheet" />
    	<link href="site.css" rel="stylesheet" />
-   	<link href="bootstrap-datepicker3.css" rel="stylesheet" />
+	<link href="bootstrap-datepicker3.css" rel="stylesheet" />
+	
+	
+
+	
+	<script>
+	function showHide() {
+  		var x = document.getElementById("advancedSearch");
+  		if (x.style.display === "none") {
+    		x.style.display = "grid";
+  		} else {
+    		x.style.display = "none";
+  		}
+	}
+	</script>
+	
+	
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">Kids-U Data Entry</a>
-            </div>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+    	<div class="container">
+        	<div class="navbar-header">
+    			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+            	</button>
+            	<a class="navbar-brand" href="/">Kids-U Data Entry</a>
+        	</div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="/Students">Student Enrollment</a></li>
@@ -27,26 +43,92 @@
 					<li><a href="/ReportCardRecords">Report Cards</a></li>
                     <li><a href="/AttendanceDaily">Attendance</a></li>
                 </ul>
-                <form action="/Login/LogOff" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="hVHGkUiz4lH7TQUUuEGEhaHDDq0QbY22toHLKdoRghXHVNH0z_2n3C-7rh-ZknE4vTLgwUz8xMAxiYvXRGFCweMEdKF3lSXmxdS82RqjnKslhgnv3fdR_MaDpvK1Uv2_0" />    <ul class="nav navbar-nav navbar-right">
-	    <li><a>Hello diana@kids-u.org!</a></li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
-    </ul>
-</form>
-            </div>
+				<form action="/Login/LogOff" class="navbar-right" id="logoutForm" method="post">
+					<input name="__RequestVerificationToken" type="hidden" value="hVHGkUiz4lH7TQUUuEGEhaHDDq0QbY22toHLKdoRghXHVNH0z_2n3C-7rh-ZknE4vTLgwUz8xMAxiYvXRGFCweMEdKF3lSXmxdS82RqjnKslhgnv3fdR_MaDpvK1Uv2_0" />    
+					<ul class="nav navbar-nav navbar-right">
+	    				<li><a>Hello diana@kids-u.org!</a></li>
+       					<li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+    				</ul>
+				</form>
+        	</div>
         </div>
     </div>
-    <div class="container body-content">
-        
+<div class="container body-content">
+	<h2>Student Roster</h2>
 
 
-<h2>Student Roster </h2>
 
-<p>
-    <a href="/Students/Create">Create New</a>
-</p>
-<p>
-    <a href="/Students/Export">Export</a>
-</p>
+<!--New changes start here-->
+<div class="tabletop">
+	<div id="left">
+		<a href="x">Create New</a>
+		<a href="x">Export</a>
+		<select>
+				<option value="1">Sort by...</option>
+				<option value="2">to-do</option>
+			</select>
+	</div> 
+	<div id="search">
+		<input type="text" placeholder="Search...">
+		<button type="button" onclick="showHide()">Adv.</button>
+		<button type="submit">Go</button>
+	</div>
+</div>
+
+<div class="expand" id="advancedSearch">
+	<div id="ethnicity">
+		Ethnicity:<br>
+		<input type="checkbox">African-American<br>
+		<input type="checkbox">Asian<br>
+		<input type="checkbox">etc...
+	</div>
+	<div id="gender">
+		Gender:<br>
+		<input type="radio" name="gender">Male<br>
+		<input type="radio" name="gender">Female
+	</div>
+	<div id="enrolled">
+		Enrolled:<br>
+		Specify range: <input type="checkbox"><br>
+		<input type="number"><br>
+	</div>
+	<div id="income">
+		Income:<br>
+		Specify range: <input type="checkbox"><br>
+		<input type="checkbox">Less than $...<br>
+		<input type="checkbox">$... to $...<br>
+		<input type="checkbox">Greater than $...
+	</div>
+	<div id="lunch">
+		Free Lunch:<br>
+		<input type="radio" name="lunch">Yes<br>
+		<input type="radio" name="lunch">No
+	</div>
+	<div id="school">
+		School:<br>
+		<input type="checkbox">school 1<br>
+		<input type="checkbox">school 2<br>
+		<input type="checkbox">etc...
+	</div>
+	<div id="facility">
+		Facility:<br>
+		<input type="checkbox">facility 1<br>
+		<input type="checkbox">facility 2<br>
+		<input type="checkbox">etc...
+	</div>
+	<div id="grade">
+		School Grade:<br>
+		Specify range: <input type="checkbox"><br>
+		<input type="checkbox">K<br>
+		<input type="checkbox">1<br>
+		<input type="checkbox">2<br>
+		<input type="checkbox">etc...
+	</div>
+</div>
+<!--Changes end here-->
+
+
+
 <table class="table">
     <tr>
         <th>
@@ -16864,7 +16946,6 @@
     </tr>
 
 </table>
-
         <hr />
 		<footer>
 			Site Built at <a href="http://www.dallasgivecamp.org">Dallas GiveCamp</a> | Hosting Donated by <a href="http://www.everleap.com">Everleap</a>

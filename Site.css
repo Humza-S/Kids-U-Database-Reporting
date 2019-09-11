@@ -52,10 +52,6 @@ footer {
 	background: #000C7C;
 }
 
-
-
-
-
 .tabletop {
 	display: flex;
 	flex-flow: row wrap;
@@ -65,7 +61,7 @@ footer {
 }
 
 #left {
-	flex: 0 0 300px;
+	flex: 0 0 500px;
 	text-align: left;
 }
 #left a {
@@ -85,8 +81,9 @@ footer {
 	height: 35px;
 	padding: 5px 8px;
 	border: none;
-	background: transparent;
+	background: white;
 }
+
 #left select:focus {
 	outline: none;
 }

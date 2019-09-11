@@ -6,24 +6,10 @@
 	<title>Index - Kids-U Data Entry Application</title>
 
 	<link href="bootstrap.css" rel="stylesheet" />
-   	<link href="site.css" rel="stylesheet" />
+   	<link href="Site.css" rel="stylesheet" />
 	<link href="bootstrap-datepicker3.css" rel="stylesheet" />
-	
-	
 
-	
-	<script>
-	function showHide() {
-  		var x = document.getElementById("advancedSearch");
-  		if (x.style.display === "none") {
-    		x.style.display = "grid";
-  		} else {
-    		x.style.display = "none";
-  		}
-	}
-	</script>
-	
-	
+	<script src="search.js"></script>
 </head>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top">
@@ -56,16 +42,26 @@
 <div class="container body-content">
 	<h2>Student Roster</h2>
 
-
-
-<!--New changes start here-->
 <div class="tabletop">
 	<div id="left">
 		<a href="x">Create New</a>
 		<a href="x">Export</a>
 		<select>
-				<option value="1">Sort by...</option>
-				<option value="2">to-do</option>
+				<option value="0">Sort by...</option>
+				<option value="1">First Name A-Z</option>
+				<option value="2">First Name Z-A</option>
+				<option value="3">Last Name A-Z</option>
+				<option value="4">Last Name Z-A</option>
+				<option value="5">Enrolled Ascending</option>
+				<option value="6">Enrolled Descending</option>
+				<option value="7">Income Ascending</option>
+				<option value="8">Income Descending</option>
+				<option value="9">School A-Z</option>
+				<option value="10">School Z-A</option>
+				<option value="11">Kids-U Site A-Z</option>
+				<option value="12">Kids-U Site Z-A</option>
+				<option value="13">Grade Ascending</option>
+				<option value="14">Grade Descending</option>
 			</select>
 	</div> 
 	<div id="search">
@@ -125,9 +121,6 @@
 		<input type="checkbox">etc...
 	</div>
 </div>
-<!--Changes end here-->
-
-
 
 <table class="table">
     <tr>

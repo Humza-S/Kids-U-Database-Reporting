@@ -74,10 +74,13 @@
 <div class="expand" id="advancedSearch">
 	<div id="ethnicity">
 		Ethnicity:<br>
-		<input type="checkbox">African-American<br>
-		<input type="checkbox">Asian<br>
-		<input type="checkbox">etc...
-	</div>
+		<select> 
+            <option value="African American"> African American </option>
+            <option value="Asian">Asian</option>
+            <option value="Hispanic/Latino">Hispanic/Latino</option>
+            <option value="Caucasian/Other">Caucasian/Other</option>
+            </select>
+	</div> 
 	<div id="gender">
 		Gender:<br>
 		<input type="radio" name="gender">Male<br>
@@ -85,15 +88,15 @@
 	</div>
 	<div id="enrolled">
 		Enrolled:<br>
-		Specify range: <input type="checkbox"><br>
-		<input type="number"><br>
+		<input type="number" name="enrollmentAge" placeholder="Enter in enrollment age"> </input>
 	</div>
 	<div id="income">
 		Income:<br>
-		Specify range: <input type="checkbox"><br>
-		<input type="checkbox">Less than $...<br>
-		<input type="checkbox">$... to $...<br>
-		<input type="checkbox">Greater than $...
+		<select>
+            <option value="0-20">< $20K</option>
+            <option value="20-25">$20K - $25K</option>
+            <option value=">25">> $25K</option>
+        </select> <br>
 	</div>
 	<div id="lunch">
 		Free Lunch:<br>
@@ -102,23 +105,25 @@
 	</div>
 	<div id="school">
 		School:<br>
-		<input type="checkbox">school 1<br>
-		<input type="checkbox">school 2<br>
-		<input type="checkbox">etc...
+        <input type="text" name="schoolName" placeholder="Enter school name"></input>
 	</div>
 	<div id="facility">
 		Facility:<br>
-		<input type="checkbox">facility 1<br>
-		<input type="checkbox">facility 2<br>
-		<input type="checkbox">etc...
+		<input type="text" name="facilityName" placeholder="Enter facility name"></input>
 	</div>
 	<div id="grade">
 		School Grade:<br>
-		Specify range: <input type="checkbox"><br>
-		<input type="checkbox">K<br>
-		<input type="checkbox">1<br>
-		<input type="checkbox">2<br>
-		<input type="checkbox">etc...
+		<select>
+        <option value="K">K </option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        </select>
 	</div>
 </div>
 

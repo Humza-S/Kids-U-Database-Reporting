@@ -6,3 +6,13 @@
 /bin
 
 /obj
+
+bin/
+
+obj/
+
+/v16
+
+/config
+
+/DesignTimeBuild
